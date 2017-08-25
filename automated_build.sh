@@ -21,4 +21,4 @@ git config --global user.name "Kitty"
 
 git add .
 git commit -m "Automated Rebuild"
-git push -f origin gh-pages
+git push -f origin use-jekyll-with-contentful
