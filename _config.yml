@@ -11,6 +11,8 @@ collections:
 
 gems: [bourbon, neat]
 
+exclude: [vendor]
+
 contentful:
   spaces:
     - events:
