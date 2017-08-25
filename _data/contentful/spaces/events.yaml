@@ -3,7 +3,7 @@ event:
 - sys:
     id: 6bV1Gg4LUQYUkSUkWUO8qI
     created_at: !ruby/object:DateTime 2017-08-25 12:52:41.168000000 Z
-    updated_at: !ruby/object:DateTime 2017-08-25 12:52:41.168000000 Z
+    updated_at: !ruby/object:DateTime 2017-08-25 17:15:43.889000000 Z
     content_type_id: event
   title: Self-Compassion and Body-Image
   description: |-
@@ -20,7 +20,8 @@ event:
     No previous meditation experience required!
 
     This workshop will build on some concepts and strategies introduced in Self-Compassion: What, Why & How, which takes place again on August 9th (link below), but you are warmly invited to join regardless of whether or not you participated in the earlier workshop.
-  date_time: Wednesday, August 16th, 19 - 21:30
+  date: !ruby/object:DateTime 2017-08-16 00:00:00.000000000 Z
+  date_time: 19:00 - 21:30
   location: Tutgut, Stubbenkammer Straße 3, 10437
   cost: 20€ (sliding scale options available from 10-19€, based on ability to pay)
   participate: 'Email [contactkittymay@gmail.com](mailto:contactkittymay@gmail.com)
@@ -28,7 +29,7 @@ event:
 - sys:
     id: 6RHBLoQGFUkEA0IWcccomY
     created_at: !ruby/object:DateTime 2017-08-25 12:21:28.060000000 Z
-    updated_at: !ruby/object:DateTime 2017-08-25 12:21:28.060000000 Z
+    updated_at: !ruby/object:DateTime 2017-08-25 17:15:20.267000000 Z
     content_type_id: event
   title: 'Self-Compassion: What, Why & How'
   description: |-
@@ -41,7 +42,8 @@ event:
     I'll introduce some tools for practice, and there will be space for participants who feel comfortable to exhange experiences and share their self-compassion strategies.
 
     No meditation experience necessary!
-  date_time: Wednesday, August 9th, 19 - 21:30
+  date: !ruby/object:DateTime 2017-08-09 00:00:00.000000000 Z
+  date_time: 19:00 - 21:30
   location: Tutgut, Stubbenkammer Straße 3, 10437
   cost: 20€ (sliding scale options available from 10-19€, based on ability to pay)
   participate: 'Email [contactkittymay@gmail.com](mailto:contactkittymay@gmail.com)
