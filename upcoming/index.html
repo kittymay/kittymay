@@ -1,142 +1,55 @@
-<!doctype html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+---
+layout: page
+title: upcoming
+---
+{% for event in site.events reversed %}
+  <div class="event">
+    <h3>{{ event.title }}</h3>
+    <p>{{ event.subtitle }}</p>
+    {% if event.second_facilitator %}
+      <p class="second-facilitator">with {{ event.second_facilitator }}</p>
+    {% endif %}
+    <p>{{ event.feedback }}</p>
+    <div class="event-section">
+      {% for description in event.description_sections %}
+        <p>{{ description }}</p>
+      {% endfor %}
+    </div>
 
-  <link rel="stylesheet" href="../static/main.css">
-  <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
-  <title>Kitty May</title>
-</head>
-
-<body>
-  <header>
-    <div class="logo"><a href="/">Kitty May</a></div>
-    <nav>
+    {% if event.notes %}
+    <div class="event-section note">
+      <p>Please note:</p>
       <ul>
-        
-          <li class="dropdown"><a href="../about/" id="about" >about</a>
-            <ul class="dropdown-menu">
-              
-                <li><a href="../about/#approach">approach</a></li>
-              
-                <li><a href="../about/#background">background</a></li>
-              
-                <li><a href="../about/#testimonials">testimonials</a></li>
-              
-            </ul>
-          </li>
-        
-          <li class="dropdown"><a href="../work/" id="work" >work</a>
-            <ul class="dropdown-menu">
-              
-                <li><a href="../work/#adults">adults</a></li>
-              
-                <li><a href="../work/#professionals">professionals</a></li>
-              
-                <li><a href="../work/#youth">youth</a></li>
-              
-            </ul>
-          </li>
-        
-          <li class="dropdown"><a href="../upcoming/" id="upcoming" >upcoming</a>
-            <ul class="dropdown-menu">
-              
-                <li><a href="../upcoming/#Self-Compassion: What, Why & How</a></li>
-              
-                <li><a href="../upcoming/#Self-Compassion and Body-Image </a></li>
-              
-            </ul>
-          </li>
-        
-          <li class="dropdown"><a href="../blog/" id="blog" target="_blank">blog</a>
-            <ul class="dropdown-menu">
-              
-            </ul>
-          </li>
-        
-          <li class="dropdown"><a href="../contact/" id="contact" >contact</a>
-            <ul class="dropdown-menu">
-              
-            </ul>
-          </li>
-        
-      </ul>
-    </nav>
-  </header>
-  <div class="wrapper">
-    
-<div class="upcoming">
-  <h1>upcoming</h1>
-  
-  
-    <div id="Self-Compassion: What, Why & How" class="event">
-      <h3>Self-Compassion: What, Why & How</h3>
-      <p></p>
-      
-      <p></p>
-      <div class="event-section">
-        <p>"Compassion is the master emotion of positive change" - Jack Morin</p>
-<p>In this class, I'll draw on my experience both as a therapist and a meditation practitioner as we explore what self-compassion is, why it benefits both ourselves and others, and how to cultivate it.</p>
-<p>We'll look at the ways in which practicing meditation can help to build self-compassion and how, in turn, self-compassion supports a meditation practice.</p>
-<p>
-I'll introduce some tools for practice, and there will be space for participants who feel comfortable to exhange experiences and share their self-compassion strategies.</p>
-        <p>No meditation experience necessary!</p>
-         </div>
-
-      
-    
-      
-
-      
-
-      <ul class="event-section details">
-        <li>When: Wednesday, August 9th, 19 - 21:30</li>
-        <li>Where: Tutgut, Stubbenkammer Straße 3, 10437</li>
-        
-        <li>Cost: 20€ (sliding scale options available from 10-19€, based on ability to pay) </li>
-          
-          
-        <li>Participate: Email <a href="mailto:contactkittymay@gmail.com" target="_blank">contactkittymay@gmail.com</a> to reserve a place </li>
+      {% for note in event.notes %}
+        <li>{{ note }}</li>
+      {% endfor %}
       </ul>
     </div>
-  
-    <div id="Self-Compassion and Body-Image" class="event">
-      <h3>Self-Compassion and Body-Image</h3>
-      
-      
-      <p></p>
-      <div class="event-section">
-        <p>"There's no wrong way to have a body" - Glenn Marla</p>
-<p>How do you feel when you look in the mirror, see a photograph of yourself, or look down at your naked body in the shower? </p>
-<p>In this workshop, I’ll draw on my experience both as a therapist and a meditation practitioner as we explore how our thoughts and feelings about our bodies and appearance can impact – and reflect – our overall wellbeing. </p>
-        <p>We’ll look at how meditation practices can help us to cultivate a loving, appreciative attitude towards our bodies, as well as learning about and trying out some different tools for infusing our body-image with self-compassion. </p>
-        <p>
-There will be space for participants who feel comfortable doing so to share experiences and exchange ideas for developing self-compassion and a positive body-image.</p>
-        <p>No previous meditation experience required!</p>
-        <p>This workshop will build on some concepts and strategies introduced in Self-Compassion: What, Why & How, which takes place again on August 9th (link below), but you are warmly invited to join regardless of whether or not you participated in the earlier workshop.</p>
-       
-      </div>
-      
-      <ul class="event-section details">
-        <li>When: Wednesday, August 16th, 19:00-21:30</li>
-        <li>Where: Tutgut, Stubbenkammer Straße 3, Prenzlauer Berg, Berlin</li>
-   
-        <li>Cost: 20€ (sliding scale options available from 10-19€, based on ability to pay)</li>
-      
+    {% endif %}
 
-          
-          
-        <li>Participate: Email <a href="mailto:contactkittymay@gmail.com" target="_blank">contactkittymay@gmail.com</a> to reserve a place 
-</li>
+    {% if event.previous_feedback %}
+    <div class="event-section feedback">
+      <p>Feedback from previous workshops:</p>
+      <ul>
+        {% for feedback in event.previous_feedback %}
+          <li>"{{ feedback }}"</li>
+        {% endfor %}
       </ul>
     </div>
-  
+    {% endif %}
 
-</div>
-
+    <ul class="event-section details">
+      <li>When: {{ event.when }}</li>
+      <li>Where: {{ event.where }}</li>
+      <li>Who: {{ event.who }}</li>
+      <li>Cost: {{ event.cost_description }}</li>
+        <ul class="cost-tiers">
+        {% for tier in event.cost_tiers %}
+          <li>- {{ tier }}</li>
+        {% endfor %}
+          <li>{{ event.cost_note }}</li>
+        </ul>
+      <li>Participate: {{ event.participate }}</li>
+    </ul>
   </div>
-  <footer>
-    <h2><a href="/contact">» Get in touch</a></h2>
-  </footer>
-</body>
+{% endfor %}

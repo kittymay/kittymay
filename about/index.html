@@ -1,141 +1,25 @@
-<!doctype html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+---
+layout: page
+title: about
+---
+{% for about_section in site.about_sections %}
+  <div id="{{about_section.name}}" class="{{about_section.name}}">
+    <h2>{{about_section.name}}:</h2>
+      {% if about_section.paragraphs %}
+      <div class="content">
+        {% for paragraph in about_section.paragraphs %}
+          <p>{{ paragraph }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
 
-  <link rel="stylesheet" href="../static/main.css">
-  <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
-  <title>Kitty May</title>
-</head>
-
-<body>
-  <header>
-    <div class="logo"><a href="/">Kitty May</a></div>
-    <nav>
-      <ul>
-        
-          <li class="dropdown"><a href="../about/" id="about" >about</a>
-            <ul class="dropdown-menu">
-              
-                <li><a href="../about/#approach">approach</a></li>
-              
-                <li><a href="../about/#background">background</a></li>
-              
-                <li><a href="../about/#testimonials">testimonials</a></li>
-              
-            </ul>
-          </li>
-        
-          <li class="dropdown"><a href="../work/" id="work" >work</a>
-            <ul class="dropdown-menu">
-              
-                <li><a href="../work/#adults">adults</a></li>
-              
-                <li><a href="../work/#professionals">professionals</a></li>
-              
-                <li><a href="../work/#youth">youth</a></li>
-              
-            </ul>
-          </li>
-        
-          <li class="dropdown"><a href="../upcoming/" id="upcoming" >upcoming</a>
-            <ul class="dropdown-menu">
-              
-                <li><a href="../upcoming/#Demystifying Orgasm">Demystifying Orgasm</a></li>
-              
-                <li><a href="../upcoming/#(Re)Claiming Sexuality">(Re)Claiming Sexuality</a></li>
-              
-            </ul>
-          </li>
-        
-          <li class="dropdown"><a href="../blog/" id="blog" target="_blank">blog</a>
-            <ul class="dropdown-menu">
-              
-            </ul>
-          </li>
-        
-          <li class="dropdown"><a href="../contact/" id="contact" >contact</a>
-            <ul class="dropdown-menu">
-              
-            </ul>
-          </li>
-        
-      </ul>
-    </nav>
-  </header>
-  <div class="wrapper">
-    
-<div class="about">
-  <h1>about</h1>
-  
-
-  <div id="approach" class="approach">
-    <h2>approach:</h2>
-      
-        <div class="content">
-          <p>I am an <span class="emphasis dark-pink">educator and facilitator</span> for youth and adults, specialising in work on <span class="emphasis purple">sex, sexuality and relationships</span>. I believe that everyone has the right to <span class="emphasis light-pink">safe, healthy and pleasurable</span> sexual experiences – as well as the right to determine for themselves what those terms mean.</p>
-<p>My <span class="emphasis purple">person-centered and participatory</span> approach <span class="emphasis dark-pink">empowers people</span> with the knowledge and confidence to make informed, responsible choices; <span class="emphasis light-pink">encourages critical thinking</span>; and creates <span class="emphasis dark-pink">open, comfortable spaces</span> where people can reflect, share and learn.</p>
-
+      {% for testimonial in about_section.testimonials %}
+        <div class="testimonial-full">
+          {% for paragraph in testimonial.paragraphs %}
+            <p>{{ paragraph }}</p>
+          {% endfor %}
+          <p id="testimonial-signature">- {{ testimonial.by_line }}</p>
         </div>
-      
-
-      
+      {% endfor %}
   </div>
-
-  <div id="background" class="background">
-    <h2>background:</h2>
-      
-        <div class="content">
-          <p>I've been facilitating learning about sex, sexuality and relationships since 2004, initially as a volunteer in sexuality and gender awareness programmes and, from 2008, as a professional youth worker. With training and experience, I established expertise in sex and relationships education, and began training professionals on how (and why) to talk with youth about sex.</p>
-<p>I realised that it's not just young people who want information, or value the opportunity to explore ideas and feelings, about sexuality. So, I developed my practice further and started creating workshops and sessions for adults. Now based in Berlin, I have been a freelance sex educator, facilitator and trainer, for people of all ages, since 2012.</p>
-<p>As well as a BA (hons) (University of Leeds, UK) and an MA (McGill University, Canada) in English Literature, I hold a Diploma in Informal Education (YMCA George Williams College, UK) and a Postgraduate Certificate in Person-Centered Counseling Skills (University of East Anglia, UK). I have professional experience in both the non-profit and public sector, and have worked in Canada, the UK, South Africa and Germany. Please get in touch if you would like to see my full C.V.</p>
-
-        </div>
-      
-
-      
-  </div>
-
-  <div id="testimonials" class="testimonials">
-    <h2>testimonials:</h2>
-      
-
-      
-        
-          <div class="testimonial-full">
-            <p>I witnessed the remarkable skills Kitty has in working with women and with young people while she volunteered for our organisation in Cape Town. She was able to build relationships easily regardless of cultural barriers, and always acted professionally, remaining sensitive to contextual issues.</p>
-<p>Kitty ran Sexual and Reproductive Health training for the facilitators of both our health and our youth programmes. Kitty prepared these sessions meticulously, and created materials that we are able to use long after she has left. She designed an appropriate intervention, aimed at where the participants were at in their development, and in line with the content that they needed to understand. She was flexible, adjusting to the group dynamics, and held the learning space delicately, ensuring all were included and valued.</p>
-<p>The staff commented on how congruent Kitty was – that she spoke of sensitive issues with such ease and confidence that it made them, too, feel comfortable to open up, ask questions and share from their own experiences.</p>
-
-            <p id="testimonial-signature">- Carly Tanur, Founding Director, Mamelani Projects, Cape Town</p>
-          </div>
-        
-          <div class="testimonial-full">
-            <p>Kitty was my teaching assistant at McGill University. She is not only organized, prepared and responsible, but also one of the most natural and engaging instructors with whom I have ever worked.</p>
-<p>When I sat in on one of her weekly conferences, I found her students quite eager to contribute to the conversation, which spoke to the excellent classroom environment Kitty had engineered. She did a great job of intervening at the right times without taking over, which in turn let her students have “ownership” over the discussion.</p>
-<p>In concert with the Sexual Assault Centre of McGill Students' Society, Kitty developed a valuable training session on sexual harassment issues for our teaching assistants. The intelligence and insight with which Kitty designed this training further proved her mature and thoughtful understanding of pedagogical issues of all kinds.</p>
-<p>She is, quite simply, a remarkable teacher.</p>
-
-            <p id="testimonial-signature">- Derek Nystrom, Associate Professor, McGill University, Montreal</p>
-          </div>
-        
-          <div class="testimonial-full">
-            <p>While employed by MAP, Kitty worked as an advice worker to young people aged 11-25 and trainer to professionals in partner agencies.</p>
-<p>Kitty engages effectively with young people in both group settings and one-to-one with those in crisis and distress. Her group work is always engaging, active and fun, encouraging young people to engage with poignant issues that affect their lives. Kitty helps young people question their own assumptions and realise the impact they have on others. She relates to young people thoughtfully and creatively, with interest and warmth, and in a non-patronising way.</p>
-<p>Her training to professionals is always well planned and researched, combining theory and practice. Her experiential approach means that participants reflect in a way that has a real impact on their practice.</p>
-
-            <p id="testimonial-signature">- Robert Lancaster, Advice Services Manager, MAP, Norwich</p>
-          </div>
-        
-      
-  </div>
-
-
-</div>
-
-  </div>
-  <footer>
-    <h2><a href="/contact">» Get in touch</a></h2>
-  </footer>
-</body>
+{% endfor %}

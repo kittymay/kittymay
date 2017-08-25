@@ -1,0 +1,16 @@
+.about {
+  @extend %page-base;
+
+  .testimonials {
+    #testimonial-signature {
+      text-align: right;
+      font-size: .8em;
+      padding-bottom: 0;
+      font-style: italic;
+    }
+
+    .testimonial-full {
+      @extend .content;
+    }
+  }
+}

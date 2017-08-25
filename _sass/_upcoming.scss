@@ -1,0 +1,31 @@
+.upcoming {
+  @extend %page-base;
+}
+
+.event {
+  @extend .content;
+
+  h3, .feedback {
+    color: $dark-pink;
+  }
+
+  .second-facilitator {
+    color: $text-purple;
+  }
+
+  .event-section {
+    margin-bottom: 15px;
+  }
+
+  .note {
+    font-style: italic;
+  }
+
+  .details {
+    color: $text-purple;
+
+    .cost-tiers {
+      margin: 0 0 15px 15px;
+    }
+  }
+}

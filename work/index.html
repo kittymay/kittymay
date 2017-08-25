@@ -1,158 +1,24 @@
-<!doctype html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="../static/main.css">
-  <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
-  <title>Kitty May</title>
-</head>
-
-<body>
-  <header>
-    <div class="logo"><a href="/">Kitty May</a></div>
-    <nav>
-      <ul>
-        
-          <li class="dropdown"><a href="../about/" id="about" >about</a>
-            <ul class="dropdown-menu">
-              
-                <li><a href="../about/#approach">approach</a></li>
-              
-                <li><a href="../about/#background">background</a></li>
-              
-                <li><a href="../about/#testimonials">testimonials</a></li>
-              
-            </ul>
-          </li>
-        
-          <li class="dropdown"><a href="../work/" id="work" >work</a>
-            <ul class="dropdown-menu">
-              
-                <li><a href="../work/#adults">adults</a></li>
-              
-                <li><a href="../work/#professionals">professionals</a></li>
-              
-                <li><a href="../work/#youth">youth</a></li>
-              
-            </ul>
-          </li>
-        
-          <li class="dropdown"><a href="../upcoming/" id="upcoming" >upcoming</a>
-            <ul class="dropdown-menu">
-              
-                <li><a href="../upcoming/#Demystifying Orgasm">Demystifying Orgasm</a></li>
-              
-                <li><a href="../upcoming/#(Re)Claiming Sexuality">(Re)Claiming Sexuality</a></li>
-              
-            </ul>
-          </li>
-        
-          <li class="dropdown"><a href="../blog/" id="blog" target="_blank">blog</a>
-            <ul class="dropdown-menu">
-              
-            </ul>
-          </li>
-        
-          <li class="dropdown"><a href="../contact/" id="contact" >contact</a>
-            <ul class="dropdown-menu">
-              
-            </ul>
-          </li>
-        
-      </ul>
-    </nav>
-  </header>
-  <div class="wrapper">
-    
-<div class="work">
-  <h1>work</h1>
-  
-
-  <div class="work-section adults" id="adults">
+---
+layout: page
+title: work
+---
+{% for work_type in site.work_types %}
+  <div class="work-section {{ work_type.name }}" id="{{ work_type.name }}">
     <div class="description">
-      <h2><span>for</span> adults:</h2>
+      <h2><span>for</span> {{ work_type.name }}:</h2>
       <div class="content">
-        <p>I create <span class="dark-pink emphasis">self-development</span> and learning opportunities, particularly in relation to sex, sexuality and relationships</p>
-<p>I <span class="purple emphasis">tailor sessions</span> for specific groups, such as student organisations, women's, flt* or LGBTQ groups. Options range from <span class="light-pink emphasis">2-hour workshops</span> to <span class="dark-pink emphasis">weekend programmes</span>.</p>
-<p>I also offer <span class="light-pink emphasis">private sessions</span> for individuals, couples or other relationship constellations, or groups of friends.</p>
+        {{ work_type.content }}
       </div>
     </div>
     <div class="topics">
       <h2>topics <span>include</span>:</h2>
       <div class="content">
         <ul>
-<li>Developing Communication Skills</li>
-<li>Sex-Positivity</li>
-<li>Identifying and Expressing Desire</li>
-<li>Enthusiastic Consent</li>
-<li>Understanding the Body</li>
-<li>Demystifying Orgasm</li>
-</ul>
-
+          {% for topic in work_type.topics %}
+            <li>{{ topic }}</li>
+          {% endfor %}
+        </ul>
       </div>
     </div>
   </div>
-
-  <div class="work-section professionals" id="professionals">
-    <div class="description">
-      <h2><span>for</span> professionals:</h2>
-      <div class="content">
-        <p>I design and deliver bespoke training for professionals, from <span class="dark-pink emphasis">half-day sessions</span> to <span class="purple emphasis">long-term projects</span>. I can offer specialised support for those working with <span class="light-pink emphasis">young people</span>.
-</p>
-      </div>
-    </div>
-    <div class="topics">
-      <h2>topics <span>include</span>:</h2>
-      <div class="content">
-        <ul>
-<li>Diversity and Inclusion</li>
-<li>Understanding Gender Identity</li>
-<li>Understanding Sexual Identity</li>
-<li>Facilitation Skills</li>
-<li>Active Listening</li>
-<li>Youth-centred Practice</li>
-<li>Talking to Youth about Sex and Relationships</li>
-<li>Working with Marginalised Youth</li>
-</ul>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="work-section youth" id="youth">
-    <div class="description">
-      <h2><span>for</span> youth:</h2>
-      <div class="content">
-        <p>I create youth-centered, age-appropriate <span class="dark-pink emphasis">educational experiences</span> for young people aged 11 and up, from hour-long, <span class="purple emphasis">one-off sessions</span> to <span class="light-pink emphasis">ongoing projects</span> in schools, colleges, youth groups, support services and other settings. I have <span class="dark-pink emphasis">specialist expertise</span> in working with marginalised groups of young people.
-</p>
-      </div>
-    </div>
-    <div class="topics">
-      <h2>topics <span>include</span>:</h2>
-      <div class="content">
-        <ul>
-<li>Self-esteem &amp; Body Image</li>
-<li>Building Healthy Relationships</li>
-<li>Media Literacy</li>
-<li>Safer Sex</li>
-<li>Masturbation and Healthy Self-Exploration</li>
-<li>Communication and Consent</li>
-<li>Online Safety</li>
-<li>Am I Ready for Sex?</li>
-<li>Gender, Sexuality and Identity</li>
-</ul>
-
-      </div>
-    </div>
-  </div>
-
-
-</div>
-
-  </div>
-  <footer>
-    <h2><a href="/contact">» Get in touch</a></h2>
-  </footer>
-</body>
+{% endfor %}

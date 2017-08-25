@@ -1,0 +1,72 @@
+.home {
+  background: url('../images/homepage_background.png') no-repeat center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  overflow: hidden;
+
+  .titlebox {
+    @include shift(1);
+    margin-top: 10%;
+    color: $text-purple;
+    font-size: 2.4em;
+    font-weight: 300;
+
+    h1 {
+      margin-bottom: 5px;
+    }
+
+    .logo-may {
+      color: $dark-pink;
+      font-weight: 300;
+    }
+
+    .educator {
+      color: $dark-pink;
+      margin-left: 20px;
+    }
+
+    .facilitator {
+      margin-left: 110px;
+    }
+  }
+
+  .testimonial-box {
+    margin: 11% 0 5% 10%;
+    color: $off-white;
+    height: 130px;
+    overflow: hidden;
+
+    @include media($mobile) {
+      display: none;
+    }
+
+    .testimonial {
+      height: 130px;
+      width: 350px;
+
+      p {
+        font-style: italic;
+      }
+
+      #read-more {
+        text-align: right;
+        font-style: normal;
+      }
+    }
+
+    .carousel-container {
+      position: relative;
+      -webkit-animation: move 15s linear 5s infinite; /* Chrome, Safari, Opera */
+      animation: move 15s linear 5s infinite;
+    }
+  }
+
+  .photo-credit {
+    color: $off-white;
+    text-align: right;
+    padding: 0 10px 10px 0;
+    opacity: .5;
+  }
+}

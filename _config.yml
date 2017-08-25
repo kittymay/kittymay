@@ -1,0 +1,12 @@
+title: Kitty May
+description: Sex educator and facilitator
+baseurl: ""
+url: "http://kittymay.com"
+
+markdown: kramdown
+collections:
+  - events
+  - work_types
+  - about_sections
+
+gems: [bourbon, neat]

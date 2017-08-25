@@ -1,0 +1,26 @@
+.contact {
+  @extend %page-base;
+
+  .contact-description, .email-signup {
+    @include span-columns(6);
+
+    @include media($mobile) {
+      @include span-columns(12);
+    }
+  }
+
+  .email-signup {
+    color: #E0A3B6;
+
+    #mc_embed_signup {
+      .button {
+        margin: 15px 5px 0 0;
+        height: 40px;
+      }
+
+      .mc-field-group {
+        padding-bottom: 1.5%;
+      }
+    }
+  }
+}

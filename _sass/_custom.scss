@@ -1,0 +1,144 @@
+$off-white: rgb(238, 236, 234);
+$dark-pink: #D5749F;
+$text-purple: #B69DDD;
+$light-pink-text: #FCDEFC;
+$content-background: rgba(243, 234, 241, 0.24);
+
+$mobile: new-breakpoint(max-width 768px);
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+html {
+  font-size: $base-font-size;
+  height:100%;
+  background-color: black;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+}
+
+.wrapper {
+  @include clearfix;
+}
+
+h1, h2 {
+  color: $text-purple;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+a {
+  text-decoration: none;
+  color: $off-white;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: none;
+    color: $dark-pink;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+%page-base {
+  @include span-columns(8);
+  @include shift(2);
+
+  font-size: 1.2em;
+
+  @include media($mobile) {
+    @include span-columns(12);
+    @include shift(0);
+    padding: 0 5px;
+    font-size: 1em;
+  }
+
+  .content {
+    background-color: $content-background;
+    padding: 15px;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 20px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    color: $off-white;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li:not(:last-child) {
+      padding-bottom: 5px;
+    }
+  }
+
+  .emphasis {
+    font-size: 1.4em;
+    font-weight: bold;
+
+    &.dark-pink {
+    color: $dark-pink;
+    }
+
+    &.purple {
+      color: $text-purple;
+    }
+
+    &.light-pink {
+      color: $light-pink-text;
+    }
+  }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes move {
+  0% { bottom: 0; }
+  10% { bottom: 130px; }
+  50% { bottom: 130px; }
+  60% { bottom: 260px; }
+  100% { bottom: 260px; }
+}
+
+/* Standard syntax */
+@keyframes move {
+  0% { bottom: 0; }
+  10% { bottom: 130px; }
+  50% { bottom: 130px; }
+  60% { bottom: 260px; }
+  100% { bottom: 260px; }
+}
+
+footer {
+  text-align: center;
+
+  header {
+    display: none;
+
+    @include media($mobile) {
+      border-top: 2px solid $dark-pink;
+      border-bottom: none;
+      display: block;
+    }
+  }
+}

@@ -1,71 +1,6 @@
-<!doctype html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="./static/main.css">
-  <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
-  <title>Kitty May</title>
-</head>
-
-<body>
-  <header>
-    <div class="logo"><a href="/">Kitty May</a></div>
-    <nav>
-      <ul>
-        
-          <li class="dropdown"><a href="./about/" id="about" >about</a>
-            <ul class="dropdown-menu">
-              
-                <li><a href="./about/#approach">approach</a></li>
-              
-                <li><a href="./about/#background">background</a></li>
-              
-                <li><a href="./about/#testimonials">testimonials</a></li>
-              
-            </ul>
-          </li>
-        
-          <li class="dropdown"><a href="./work/" id="work" >work</a>
-            <ul class="dropdown-menu">
-              
-                <li><a href="./work/#adults">adults</a></li>
-              
-                <li><a href="./work/#professionals">professionals</a></li>
-              
-                <li><a href="./work/#youth">youth</a></li>
-              
-            </ul>
-          </li>
-        
-          <li class="dropdown"><a href="./upcoming/" id="upcoming" >upcoming</a>
-            <ul class="dropdown-menu">
-              
-                <li><a href="./upcoming/#Demystifying Orgasm">Demystifying Orgasm</a></li>
-              
-                <li><a href="./upcoming/#(Re)Claiming Sexuality">(Re)Claiming Sexuality</a></li>
-              
-            </ul>
-          </li>
-        
-          <li class="dropdown"><a href="./blog/" id="blog" target="_blank">blog</a>
-            <ul class="dropdown-menu">
-              
-            </ul>
-          </li>
-        
-          <li class="dropdown"><a href="./contact/" id="contact" >contact</a>
-            <ul class="dropdown-menu">
-              
-            </ul>
-          </li>
-        
-      </ul>
-    </nav>
-  </header>
-  <div class="wrapper">
-    
+---
+layout: default
+---
 <div class="home">
   <div class="titlebox">
     <h1>kitty<span class="logo-may">may</span></h1>
@@ -74,29 +9,15 @@
   </div>
   <div class="testimonial-box"><a href="#/about/testimonials">
     <div class="carousel-container">
-      
-        <div class="testimonial">
-          <p>"Kitty spoke of sensitive issues with such ease and confidence that participants felt comfortable to open up, ask questions and share"</p>
-          <div id="read-more">» Read more</div>
-        </div>
-      
-        <div class="testimonial">
-          <p>"Natural and engaging [...] She is, quite simply, a remarkable teacher"</p>
-          <div id="read-more">» Read more</div>
-        </div>
-      
-        <div class="testimonial">
-          <p>"Her experiential approach means that participants reflect in a way that has a real impact"</p>
-          <div id="read-more">» Read more</div>
-        </div>
-      
+      {% for section in site.about_sections %}
+        {% for testimonial in section.testimonials %}
+          <div class="testimonial">
+            <p>"{{ testimonial.snippet }}"</p>
+            <div id="read-more">» Read more</div>
+          </div>
+        {% endfor %}
+      {% endfor %}
     </div>
   </a></div>
   <div class="photo-credit">Photo: Anita Staff</div>
 </div>
-
-  </div>
-  <footer>
-    <h2><a href="/contact">» Get in touch</a></h2>
-  </footer>
-</body>

@@ -1,0 +1,71 @@
+header {
+  @include clearfix;
+  border-bottom: 4px solid $dark-pink;
+  background-color: black;
+  color: $off-white;
+
+  @include media($mobile) {
+    border-bottom: 2px solid $dark-pink;
+    font-size: .9em;
+    text-align: center;
+  }
+
+  .logo {
+    @include shift(1);
+    float: left;
+    font-size: 1.7em;
+    margin-top: 18px;
+
+    @include media($mobile) {
+      @include shift(0);
+      border-bottom: 2px solid $dark-pink;
+      float: none;
+      margin: 0;
+      padding: 10px 0;
+    }
+  }
+
+
+  nav {
+    font-size: 1.2em;
+    font-weight: 300;
+    float: right;
+    padding: 24px 8.5%;
+
+    @include media($mobile) {
+      float: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    & > ul > li {
+      display: inline;
+      margin: 16px;
+      position: relative;
+
+      &:hover > .dropdown-menu {
+        display: block;
+      }
+    }
+
+    .dropdown-menu {
+      background-color: black;
+      display: none;
+      float: left;
+      left: -30px;
+      padding-left: 30px;
+      position: absolute;
+      top: 100%;
+      width: 180px;
+      z-index: 1000;
+
+      li {
+        padding: 10px 0;
+      }
+    }
+  }
+}
