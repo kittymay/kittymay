@@ -12,7 +12,7 @@ bundle exec jekyll contentful
 bundle exec jekyll build
 
 # Push newly built repository
-cp -r $CWD/_build/* /tmp/build # or $CWD/_site
+cp -r $CWD/_site/* /tmp/build
 
 cd /tmp/build
 
@@ -21,4 +21,4 @@ git config --global user.name "Kitty"
 
 git add .
 git commit -m "Automated Rebuild"
-git push -f origin use-jekyll-with-contentful
+git push -f origin gh-pages
