@@ -2,18 +2,16 @@
 layout: page
 title: upcoming
 ---
-{% for event in site.events reversed %}
+{% for event in site.data.contentful.spaces.events.event %}
   <div class="event">
     <h3>{{ event.title }}</h3>
     <p>{{ event.subtitle }}</p>
     {% if event.second_facilitator %}
-      <p class="second-facilitator">with {{ event.second_facilitator }}</p>
+    <p class="second-facilitator">with {{ event.second_facilitator }}</p>
     {% endif %}
     <p>{{ event.feedback }}</p>
     <div class="event-section">
-      {% for description in event.description_sections %}
-        <p>{{ description }}</p>
-      {% endfor %}
+      {{ event.description | markdownify }}
     </div>
 
     {% if event.notes %}
@@ -21,7 +19,7 @@ title: upcoming
       <p>Please note:</p>
       <ul>
       {% for note in event.notes %}
-        <li>{{ note }}</li>
+      <li>{{ note }}</li>
       {% endfor %}
       </ul>
     </div>
@@ -32,24 +30,30 @@ title: upcoming
       <p>Feedback from previous workshops:</p>
       <ul>
         {% for feedback in event.previous_feedback %}
-          <li>"{{ feedback }}"</li>
+        <li>"{{ feedback }}"</li>
         {% endfor %}
       </ul>
     </div>
     {% endif %}
 
     <ul class="event-section details">
-      <li>When: {{ event.when }}</li>
-      <li>Where: {{ event.where }}</li>
+      <li>When: {{ event.date_time }}</li>
+      <li>Where: {{ event.location }}</li>
+      {% if event.who %}
       <li>Who: {{ event.who }}</li>
-      <li>Cost: {{ event.cost_description }}</li>
+      {% endif %}
+      <li>Cost: {{ event.cost }}</li>
+        {% if event.cost_tiers %}
         <ul class="cost-tiers">
         {% for tier in event.cost_tiers %}
           <li>- {{ tier }}</li>
         {% endfor %}
-          <li>{{ event.cost_note }}</li>
         </ul>
-      <li>Participate: {{ event.participate }}</li>
+        {% endif %}
+        {% if event.who %}
+        <li>{{ event.cost_note }}</li>
+        {% endif %}
+      <li>Participate: {{ event.participate | markdownify }}</li>
     </ul>
   </div>
 {% endfor %}

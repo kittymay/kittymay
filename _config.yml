@@ -10,3 +10,9 @@ collections:
   - about_sections
 
 gems: [bourbon, neat]
+
+contentful:
+  spaces:
+    - events:
+        space:        ENV_CONTENTFUL_SPACE_ID
+        access_token: ENV_CONTENTFUL_ACCESS_TOKEN
