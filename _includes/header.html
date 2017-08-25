@@ -2,23 +2,23 @@
   <div class="logo"><a href="/">Kitty May</a></div>
   <nav>
     <ul>
-      <li class="dropdown"><a href="/about">About</a>
+      <li class="dropdown"><a href="/about">about</a>
         <ul class="dropdown-menu">
           {% for about_section in site.about_sections %}
             <li><a href="/about/#{{ about_section.name }}">{{ about_section.name }}</a></li>
           {% endfor %}
         </ul>
       </li>
-      <li class="dropdown"><a href="/work">Work</a>
+      <li class="dropdown"><a href="/work">work</a>
         <ul class="dropdown-menu">
           {% for work_type in site.work_types %}
-            <li><a href="/work/#{{ work_type.name }}">For {{ work_type.name }}</a></li>
+            <li><a href="/work/#{{ work_type.name }}">{{ work_type.name }}</a></li>
           {% endfor %}
         </ul>
       </li>
-      <li><a href="/upcoming" id="upcoming">Upcoming</a></li>
-      <li><a href="http://lipstickandteeth.wordpress.com" target="_blank">Blog</a></li>
-      <li><a href="/contact" id="contact">Contact</a></li>
+      <li><a href="/upcoming" id="upcoming">upcoming</a></li>
+      <li><a href="http://lipstickandteeth.wordpress.com" target="_blank">blog</a></li>
+      <li><a href="/contact" id="contact">contact</a></li>
     </ul>
   </nav>
 </header>
