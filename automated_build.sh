@@ -4,7 +4,6 @@ CWD=`pwd`
 # Clone Pages repository
 cd /tmp
 git clone git@github.com:kittymay/kittymay.github.io.git build
-cd build && git checkout -b use-jekyll-with-contentful origin/use-jekyll-with-contentful
 
 # Trigger Jekyll rebuild
 cd $CWD
@@ -21,4 +20,4 @@ git config --global user.name "Kitty"
 
 git add .
 git commit -m "Automated Rebuild"
-git push -f origin use-jekyll-with-contentful
+git push -f origin master
