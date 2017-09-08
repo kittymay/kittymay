@@ -1,0 +1,117 @@
+---
+testimonials:
+- sys:
+    id: 6Ooc4NSrg4i4CI40mic6ig
+    created_at: !ruby/object:DateTime 2017-09-08 07:00:26.812000000 Z
+    updated_at: !ruby/object:DateTime 2017-09-08 07:00:26.812000000 Z
+    content_type_id: testimonials
+  author: Carly Tanur, Founding Director, Mamelani Projects, Cape Town
+  full: |-
+    I witnessed the remarkable skills Kitty has in working with women and with young people while she volunteered for our organisation in Cape Town. She was able to build relationships easily regardless of cultural barriers, and always acted professionally, remaining sensitive to contextual issues.
+
+    Kitty ran Sexual and Reproductive Health training for the facilitators of both our health and our youth programmes. Kitty prepared these sessions meticulously, and created materials that we are able to use long after she has left. She designed an appropriate intervention, aimed at where the participants were at in their development, and in line with the content that they needed to understand. She was flexible, adjusting to the group dynamics, and held the learning space delicately, ensuring all were included and valued.
+
+    The staff commented on how congruent Kitty was – that she spoke of sensitive issues with such ease and confidence that it made them, too, feel comfortable to open up, ask questions and share from their own experiences.
+  quote: Kitty spoke of sensitive issues with such ease and confidence that participants
+    felt comfortable to open up, ask questions and share
+- sys:
+    id: 2gJoMrzTmwemUouis2WQoq
+    created_at: !ruby/object:DateTime 2017-09-08 07:02:34.197000000 Z
+    updated_at: !ruby/object:DateTime 2017-09-08 07:02:34.197000000 Z
+    content_type_id: testimonials
+  author: Robert Lancaster, Advice Services Manager, MAP, Norwich
+  full: |-
+    While employed by MAP, Kitty worked as an advice worker to young people aged 11-25 and trainer to professionals in partner agencies.
+
+    Kitty engages effectively with young people in both group settings and one-to-one with those in crisis and distress. Her group work is always engaging, active and fun, encouraging young people to engage with poignant issues that affect their lives. Kitty helps young people question their own assumptions and realise the impact they have on others. She relates to young people thoughtfully and creatively, with interest and warmth, and in a non-patronising way.
+
+    Her training to professionals is always well planned and researched, combining theory and practice. Her experiential approach means that participants reflect in a way that has a real impact on their practice.
+  quote: Her experiential approach means that participants reflect in a way that has
+    a real impact
+- sys:
+    id: 543rFXRk4o8cyW8GEYa2og
+    created_at: !ruby/object:DateTime 2017-09-08 07:01:35.893000000 Z
+    updated_at: !ruby/object:DateTime 2017-09-08 07:01:35.894000000 Z
+    content_type_id: testimonials
+  author: Derek Nystrom, Associate Professor, McGill University, Montreal
+  full: |-
+    Kitty was my teaching assistant at McGill University. She is not only organized, prepared and responsible, but also one of the most natural and engaging instructors with whom I have ever worked.
+
+    When I sat in on one of her weekly conferences, I found her students quite eager to contribute to the conversation, which spoke to the excellent classroom environment Kitty had engineered. She did a great job of intervening at the right times without taking over, which in turn let her students have “ownership” over the discussion.
+
+    In concert with the Sexual Assault Centre of McGill Students' Society, Kitty developed a valuable training session on sexual harassment issues for our teaching assistants. The intelligence and insight with which Kitty designed this training further proved her mature and thoughtful understanding of pedagogical issues of all kinds.
+
+    She is, quite simply, a remarkable teacher.
+  quote: Natural and engaging [...] She is, quite simply, a remarkable teacher
+about:
+- sys:
+    id: 7Czq0PRQsMkKsAQGYOmkay
+    created_at: !ruby/object:DateTime 2017-09-08 07:18:11.410000000 Z
+    updated_at: !ruby/object:DateTime 2017-09-08 07:18:11.410000000 Z
+    content_type_id: about
+  title: Approach
+  body: |-
+    I am an <span class="emphasis dark-pink">educator and facilitator</span> for youth and adults, specialising in work on <span class="emphasis purple">sex, sexuality and relationships</span>. I believe that everyone has the right to <span class="emphasis light-pink">safe, healthy and pleasurable</span> sexual experiences – as well as the right to determine for themselves what those terms mean.
+
+    My <span class="emphasis purple">person-centered and participatory</span> approach <span class="emphasis dark-pink">empowers people</span> with the knowledge and confidence to make informed, responsible choices; <span class="emphasis light-pink">encourages critical thinking</span>; and creates <span class="emphasis dark-pink">open, comfortable spaces</span> where people can reflect, share and learn.
+- sys:
+    id: 44ExEAgS8gIwokEqS2888
+    created_at: !ruby/object:DateTime 2017-09-08 07:18:50.269000000 Z
+    updated_at: !ruby/object:DateTime 2017-09-08 07:18:50.269000000 Z
+    content_type_id: about
+  title: Background
+  body: |-
+    I've been facilitating learning about sex, sexuality and relationships since 2004, initially as a volunteer in sexuality and gender awareness programmes and, from 2008, as a professional youth worker. With training and experience, I established expertise in sex and relationships education, and began training professionals on how (and why) to talk with youth about sex.
+
+    I realised that it's not just young people who want information, or value the opportunity to explore ideas and feelings, about sexuality. So, I developed my practice further and started creating workshops and sessions for adults. Now based in Berlin, I have been a freelance sex educator, facilitator and trainer, for people of all ages, since 2012.
+
+    As well as a BA (hons) (University of Leeds, UK) and an MA (McGill University, Canada) in English Literature, I hold a Diploma in Informal Education (YMCA George Williams College, UK) and a Postgraduate Certificate in Person-Centered Counseling Skills (University of East Anglia, UK). I have professional experience in both the non-profit and public sector, and have worked in Canada, the UK, South Africa and Germany. Please get in touch if you would like to see my full C.V.
+event:
+- sys:
+    id: 6bV1Gg4LUQYUkSUkWUO8qI
+    created_at: !ruby/object:DateTime 2017-08-25 12:52:41.168000000 Z
+    updated_at: !ruby/object:DateTime 2017-08-25 18:35:53.797000000 Z
+    content_type_id: event
+  title: Self-Compassion and Body-Image
+  description: |-
+    "There's no wrong way to have a body" - Glenn Marla
+
+    How do you feel when you look in the mirror, see a photograph of yourself, or look down at your naked body in the shower?
+
+    In this workshop, I’ll draw on my experience both as a therapist and a meditation practitioner as we explore how our thoughts and feelings about our bodies and appearance can impact – and reflect – our overall wellbeing.
+
+    We’ll look at how meditation practices can help us to cultivate a loving, appreciative attitude towards our bodies, as well as learning about and trying out some different tools for infusing our body-image with self-compassion.
+
+    There will be space for participants who feel comfortable doing so to share experiences and exchange ideas for developing self-compassion and a positive body-image.
+
+    No previous meditation experience is required!
+
+    This workshop will build on some concepts and strategies introduced in Self-Compassion: What, Why & How, which takes place again on August 9th (link below), but you are warmly invited to join regardless of whether or not you participated in the earlier workshop.
+  date: !ruby/object:DateTime 2017-08-16 00:00:00.000000000 Z
+  date_time: 19:00 - 21:30
+  location: Tutgut, Stubbenkammer Straße 3, 10437
+  cost: 20€ (sliding scale options available from 10-19€, based on ability to pay)
+  participate: 'Email [contactkittymay@gmail.com](mailto:contactkittymay@gmail.com)
+    to reserve a place '
+- sys:
+    id: 6RHBLoQGFUkEA0IWcccomY
+    created_at: !ruby/object:DateTime 2017-08-25 12:21:28.060000000 Z
+    updated_at: !ruby/object:DateTime 2017-08-25 17:15:20.267000000 Z
+    content_type_id: event
+  title: 'Self-Compassion: What, Why & How'
+  description: |-
+    "Compassion is the master emotion of positive change" - Jack Morin
+
+    In this class, I'll draw on my experience both as a therapist and a meditation practitioner as we explore what self-compassion is, why it benefits both ourselves and others, and how to cultivate it.
+
+    We'll look at the ways in which practicing meditation can help to build self-compassion and how, in turn, self-compassion supports a meditation practice.
+
+    I'll introduce some tools for practice, and there will be space for participants who feel comfortable to exhange experiences and share their self-compassion strategies.
+
+    No meditation experience necessary!
+  date: !ruby/object:DateTime 2017-08-09 00:00:00.000000000 Z
+  date_time: 19:00 - 21:30
+  location: Tutgut, Stubbenkammer Straße 3, 10437
+  cost: 20€ (sliding scale options available from 10-19€, based on ability to pay)
+  participate: 'Email [contactkittymay@gmail.com](mailto:contactkittymay@gmail.com)
+    to reserve a place '

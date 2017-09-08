@@ -2,24 +2,20 @@
 layout: page
 title: about
 ---
-{% for about_section in site.about_sections %}
-  <div id="{{about_section.name}}" class="{{about_section.name}}">
-    <h2>{{about_section.name}}:</h2>
-      {% if about_section.paragraphs %}
-      <div class="content">
-        {% for paragraph in about_section.paragraphs %}
-          <p>{{ paragraph }}</p>
-        {% endfor %}
-      </div>
-      {% endif %}
-
-      {% for testimonial in about_section.testimonials %}
-        <div class="testimonial-full">
-          {% for paragraph in testimonial.paragraphs %}
-            <p>{{ paragraph }}</p>
-          {% endfor %}
-          <p id="testimonial-signature">- {{ testimonial.by_line }}</p>
-        </div>
-      {% endfor %}
+{% for section in site.data.contentful.spaces.kittymay.about %}
+<div id="{{ section.title | downcase }}" class="{{ section.title | downcase }}">
+  <h2>{{ section.title | downcase }}:</h2>
+  <div class="content">
+    {{ section.body | markdownify }}
   </div>
+</div>
 {% endfor %}
+<div id="testimonials" class="testimonials">
+  <h2>testimonials:</h2>
+  {% for testimonial in site.data.contentful.spaces.kittymay.testimonials %}
+  <div class="testimonial-full">
+    {{ testimonial.full | markdownify }}
+    <p id="testimonial-signature">- {{ testimonial.author }}</p>
+  </div>
+  {% endfor %}
+</div>

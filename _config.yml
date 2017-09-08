@@ -5,9 +5,7 @@ url: "http://kittymay.com"
 
 markdown: kramdown
 collections:
-  - events
   - work_types
-  - about_sections
 
 gems: [bourbon, neat]
 
@@ -15,6 +13,6 @@ exclude: [vendor]
 
 contentful:
   spaces:
-    - events:
+    - kittymay:
         space:        ENV_CONTENTFUL_SPACE_ID
         access_token: ENV_CONTENTFUL_ACCESS_TOKEN

@@ -2,13 +2,7 @@
   <div class="logo"><a href="/">Kitty May</a></div>
   <nav>
     <ul>
-      <li class="dropdown"><a href="/about">about</a>
-        <ul class="dropdown-menu">
-          {% for about_section in site.about_sections %}
-            <li><a href="/about/#{{ about_section.name }}">{{ about_section.name }}</a></li>
-          {% endfor %}
-        </ul>
-      </li>
+      <li><a href="/about">about</a></li>
       <li class="dropdown"><a href="/work">work</a>
         <ul class="dropdown-menu">
           {% for work_type in site.work_types %}
