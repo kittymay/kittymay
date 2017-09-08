@@ -4,8 +4,6 @@ baseurl: ""
 url: "http://kittymay.com"
 
 markdown: kramdown
-collections:
-  - work_types
 
 gems: [bourbon, neat]
 

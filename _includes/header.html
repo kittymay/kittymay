@@ -5,8 +5,8 @@
       <li><a href="/about">about</a></li>
       <li class="dropdown"><a href="/work">work</a>
         <ul class="dropdown-menu">
-          {% for work_type in site.work_types %}
-            <li><a href="/work/#{{ work_type.name }}">{{ work_type.name }}</a></li>
+          {% for type in site.data.contentful.spaces.kittymay.workType %}
+            <li><a href="/work/#{{ type.title | downcase }}">{{ type.title | downcase }}</a></li>
           {% endfor %}
         </ul>
       </li>

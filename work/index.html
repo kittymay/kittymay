@@ -2,19 +2,19 @@
 layout: page
 title: work
 ---
-{% for work_type in site.work_types %}
-  <div class="work-section {{ work_type.name }}" id="{{ work_type.name }}">
+{% for type in site.data.contentful.spaces.kittymay.workType %}
+  <div class="work-section {{ type.title | downcase }}" id="{{ type.title | downcase }}">
     <div class="description">
-      <h2><span>for</span> {{ work_type.name }}:</h2>
+      <h2><span>for</span> {{ type.title | downcase }}:</h2>
       <div class="content">
-        {{ work_type.content }}
+        {{ type.description | markdownify }}
       </div>
     </div>
     <div class="topics">
       <h2>topics <span>include</span>:</h2>
       <div class="content">
         <ul>
-          {% for topic in work_type.topics %}
+          {% for topic in type.topics %}
             <li>{{ topic }}</li>
           {% endfor %}
         </ul>
