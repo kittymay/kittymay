@@ -38,7 +38,11 @@ title: upcoming
     <ul class="event-section details">
       <li>When:
       {% assign d = event.date | date: "%-d" %}
-        {{ event.date | date: "%A, %B" }}
+        {% if event.end_date %}
+          {{ event.date | date: "%As, %B" }}
+        {% else %}
+          {{ event.date | date: "%A, %B" }}
+        {% endif %}
         {% case d %}
         {% when '1' or '21' or '31' %}{{ d }}st
         {% when '2' or '22' %}{{ d }}nd
@@ -48,7 +52,7 @@ title: upcoming
       {% if event.end_date %}
          -
         {% assign d = event.end_date | date: "%-d" %}
-        {{ event.end_date | date: "%A, %B" }}
+        {{ event.end_date | date: "%B" }}
         {% case d %}
         {% when '1' or '21' or '31' %}{{ d }}st
         {% when '2' or '22' %}{{ d }}nd
